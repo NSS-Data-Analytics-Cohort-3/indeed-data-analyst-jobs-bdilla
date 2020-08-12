@@ -1,0 +1,3 @@
+--count rows--
+
+Select COUNT (*) FROM data_analyst_jobs;
