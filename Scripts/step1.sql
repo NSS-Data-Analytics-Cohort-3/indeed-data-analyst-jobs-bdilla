@@ -31,9 +31,14 @@ TN and KY - Select * FROM data_analyst_jobs WHERE location = 'TN' OR location = 
  FROM data_analyst_jobs
  WHERE title NOT LIKE 'Analyst%' */
 
-SELECT title
+/*SELECT COUNT(title), title
  FROM data_analyst_jobs
- WHERE title NOT LIKE '%Analyst%' AND title NOT LIKE '%Analytics%'
+ WHERE title NOT ILIKE '%Analyst%' AND title NOT ILIKE '%Analytics%'
+ GROUP BY title*/
+ 
+ SELECT title
+ FROM data_analyst_jobs
+ WHERE 'Analy%' NOT IN (title)
 
 
 
